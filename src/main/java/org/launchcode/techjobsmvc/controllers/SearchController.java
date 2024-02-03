@@ -38,7 +38,7 @@ public class SearchController {
         } else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
         }
-        model.addAttribute("columns", columnChoices); // ?? How can I reuse line 26 model.addAttribute??
+        model.addAttribute("columns", columnChoices);
 
         model.addAttribute("title", "Jobs with " + columnChoices.get(searchType) + ": " + searchTerm);
         model.addAttribute("jobs", jobs);
